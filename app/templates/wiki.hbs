@@ -1,0 +1,30 @@
+</br>
+<div>
+  <label for="search-term">Search Wikipedia : </label>{{input name="search-term" size="25" type="text" value=searchTerm}}
+  <button {{action "searchWiki"}}>Search</button>
+</div>
+
+<div>
+  <h2>Search Result:</h2>
+  <h3>Total Results : {{model.totalResults}}</h3>
+
+</div>
+<ul class="list-group">
+  {{#each item in model.results}}
+    <li class="list-group-item">
+    <h3 class="media-heading">{{item.title}}</h3>
+    {{{item.summary}}}
+    </li>
+  {{/each}}
+</ul>
+
+<div>
+  <h3>Warnings: </h3>
+  <ul class="list-group">
+    {{#each warning in model.warnings}}
+      <li class="list-group-item list-group-item-warning">{{warning.type}} : {{warning.message}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+{{outlet}}
