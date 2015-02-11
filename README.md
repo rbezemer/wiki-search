@@ -1,7 +1,6 @@
 # Wiki-search
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a small example ember application to show how to create a custom RESTAdapter and RESTSerializer that can be used to search Wikipedia and display those results to the user.
 
 ## Prerequisites
 
