@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource("wiki", function() {});
+  this.route('wiki');
 });
 
 export default Router;

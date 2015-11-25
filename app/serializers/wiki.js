@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 
 export default DS.RESTSerializer.extend({
   generateUUID: function(){
@@ -89,4 +88,5 @@ export default DS.RESTSerializer.extend({
     Ember.Logger.info(rawPayload);
     return this._super(store, primaryType, rawPayload, recordId);
   }
+
 });
